@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-image:url(signup\ page.jpeg);
+}
+#maindiv{
+    margin-top: 59px;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.268);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.822);
+}
+.logo h1 {
+    background-color: black;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+     #myform{
+        background-color: rgba(255, 255, 255, 0.547);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+        input{
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .message{
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        footer{
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    width: auto;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.418);
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>"Our itihasa.com"</h1>
+        </div>
+        </header>
+        <div id="maindiv">
+            <center>
+                <h2>Sign up to Your Account</h2>
+    <form id="myform" action="project2.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" onkeyup="validateName()" required>
+        <div class="message" id="nameMessage"></div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" onkeyup="validateEmail()" required>
+        <div class="message" id="emailMessage"></div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" onkeyup="validatePassword()" required>
+        <div class="message" id="passwordMessage"></div>
+        <input style="cursor: pointer;" type="submit" value="Sign up">
+    </form>
+            </center>
+            <div style="text-align: center;margin-top: 30px;" id="div1">
+                <a style="text-decoration: none;" href="#">Terms&conditions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a style="text-decoration: none;" href="#">Privacy Notice</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a style="text-decoration: none;" href="#">Help</a>
+            </div>
+        </div>
+    <script>
+        function validateName(){
+    const name = document.getElementById("name").value;
+    const nameInput = document.getElementById("name");
+    const nameMessage = document.getElementById("nameMessage");
+    if(name.length >= 7){
+        nameInput.style.borderColor = "green";
+        nameMessage.textContent = "Name looks good";
+        nameMessage.style.color = "green";
+        return true;
+    }
+    else{
+        nameInput.style.borderColor = "red";
+        nameMessage.textContent = "Name should be at least 7 characters long";
+        nameMessage.style.color = "red";
+        return false;
+    }
+}
+function validateEmail(){
+    const email = document.getElementById("email").value;
+    const emailInput = document.getElementById("email");
+    const emailMessage = document.getElementById("emailMessage");
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if(emailPattern.test(email)){
+        emailInput.style.borderColor = "green";
+        emailMessage.textContent = "Valid email";
+        emailMessage.style.color = "green";
+        return true;
+    }
+    else{
+        emailInput.style.borderColor = "red";
+        emailMessage.textContent = "Enter a valid email";
+        emailMessage.style.color = "red";
+        return false;
+    }
+}
+
+function validatePassword(){
+    const password = document.getElementById("password").value;
+    const passwordInput = document.getElementById("password");
+    const passwordMessage = document.getElementById("passwordMessage");
+    if(password.length >= 6){
+        passwordInput.style.borderColor = "green";
+        passwordMessage.textContent = "Strong password";
+        passwordMessage.style.color = "green";
+        return true;
+    }
+    else{
+        passwordInput.style.borderColor = "red";
+        passwordMessage.textContent = "Password should be at least 6 characters long";
+        passwordMessage.style.color = "red";
+        return false;
+    }
+}
+
+document.getElementById("myform").addEventListener("submit", function(event){
+    const isvalidName = validateName();
+    const isvalidEmail = validateEmail();
+    const isvalidPassword = validatePassword();
+    if(!isvalidName || !isvalidEmail || !isvalidPassword){
+        event.preventDefault();
+    }
+});
+    </script>
+    <footer style="text-align: center; margin-top: 50px;">
+        <p style="margin-top: 35px;">&copy;2024 itsithihasa.com All Rights Reserved</p>
+    </footer>
+</body>
+</html>

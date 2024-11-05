@@ -1,0 +1,84 @@
+*{
+            
+          
+    margin: 0px;
+    padding: 0px;
+}
+#div1{
+    height: 40px;
+    width: 100%;
+    background-color:orange;
+    padding-top:10px;
+    font-size:15px;
+
+}
+#p2{
+    text-align: end;
+    cursor:pointer;
+    
+}
+#div2{
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    text-align: end;
+  }
+  
+.sign-in-btn {
+    margin-top: 5px;
+    margin-right: 10px;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    
+  }
+  
+  .sign-in-btn:hover {
+    background-color: #42b39e;
+}
+.search-bar{
+    text-align: center;
+    margin-top:50px;
+
+}
+.search-bar input{
+    padding:10px;
+    width: 300px;
+    margin-right: 10px;
+    border-radius: 30px;
+}
+.search-bar button{
+    cursor: pointer;
+    
+}
+.banner{
+    text-align: center;
+    margin-top: 100px;
+}
+.banner button {
+    background-color: greenyellow;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+Body{
+    background-image: url(war\ image\ 3.jpeg);
+    width:100%;
+}
+body{
+    background-image: url(war\ image\ 3.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+}
